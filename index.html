@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>MyMedisage - admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link rel="stylesheet" href="/css/sign-in.css">
+
+<link rel="stylesheet" href="/js/intl-tel-input-master/build/css/intlTelInput.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+      rel="stylesheet">
+
+<!-- Bootstrap CSS File -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<!-- Libraries CSS Files -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.1.2/collection/components/icon/icon.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <!-- Favicons -->
+    
+    
+    
+    
+    
+    
+    <style>
+
+
+@media (min-width: 992px) {
+  #mainNav .navbar-brand {
+    width: 250px; 
+    }  
+  #mainNav .navbar-collapse {
+    overflow: visible;
+    max-height: none;
+    }
+     
+    #mainNav .navbar-collapse .navbar-sidenav {
+      position: absolute;
+      top: 0;
+      background-color:black;
+      
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      
+      flex-direction: column;
+      margin-top: 56px; 
+      }
+          
+      #mainNav .navbar-collapse .navbar-sidenav > .nav-item {
+        width: 250px;
+        padding: 0; 
+       
+        }
+        
+       
+  
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+    
+    </style>
+
+</head>
+
+<body>
+
+<!--==========================
+  Header
+============================-->
+<div id="header" class="header" style="color: #990055 !important;">
+
+    <div id="app" >
+       
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" style="left: 0">
+            <a class="navbar-brand" href="index.php">Medisage</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fixed-left" id="navbarResponsive">
+                <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                        <a class="nav-link" href="index.php">
+                            <i class="fa fa-fw fa-dashboard"></i>
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#master" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Master Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="master">
+                            <!--<li>
+                                  <a href="listcategory.php">Faculty & School Management</a>
+
+                                </li>-->
+
+                            <li>
+                                <a href="listmcat.php">Community Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listmspecial.php">Specialty Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listsite.php">Association Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listoffice.php">Association Record Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listvendor.php">Vendor Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listseries.php">Create Series Management</a>
+
+                            </li>
+
+                            <!--	<li>
+                              <a href="listguideline.php">Guideline Master Management</a>
+
+                            </li>-->
+                            <li>
+                                <a href="listmaster.php">Video Category Master Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listmembertype.php">Board Master Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#slider" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Home Page Slider Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="slider">
+                            <li>
+                                <a href="listslider.php">Home Page Slider Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#concept" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Concept Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="concept">
+                            <li>
+                                <a href="listconcept.php">Concept Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#course" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Course Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="course">
+                            <li>
+                                <a href="listcourse.php">Course Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#video" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Video Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="video">
+                            <li>
+                                <a href="listvideo.php">Video Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#cat" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Article Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="cat">
+                            <li>
+                                <a href="listcarticle.php">Community Article Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listassoarticle.php">Association Article Management</a>
+
+                            </li>
+                            <!-- <li>
+                               <a href="listmedisage.php">Medisage Original Article Management</a>
+
+                             </li>-->
+
+                        </ul>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#member" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Member Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="member">
+                            <li>
+                                <a href="listmember.php">Member Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#expert" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Expert Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="expert">
+                            <li>
+                                <a href="listexpert.php">Expert  Management</a>
+
+                            </li>
+                            <li>
+                                <a href="listexpertinfo.php">Expert Information Management</a>
+
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+
+                    <!--	<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#doctor" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-wrench"></i>
+                        <span class="nav-link-text">Doctor Management</span>
+                      </a>
+                      <ul class="sidenav-second-level collapse" id="doctor">
+                        <li>
+                          <a href="listdoctor.php">Doctor  Management</a>
+
+                        </li>
+
+                      </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#news" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-wrench"></i>
+                        <span class="nav-link-text">News Management</span>
+                      </a>
+                      <ul class="sidenav-second-level collapse" id="news">
+                        <li>
+                          <a href="listnews.php">News Management</a>
+
+                        </li>
+
+                      </ul>
+                    </li>-->
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#newsn" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">New News Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="newsn">
+                            <li>
+                                <a href="listnewnews.php">New News Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#podcast" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Podcast Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="podcast">
+                            <li>
+                                <a href="listpodcast.php">Podcast Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#eseries" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Expert Series Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="eseries">
+                            <li>
+                                <a href="listexpertseries.php">Expert Series Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#imseries" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Import Series Data</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="imseries">
+                            <li>
+                                <a href="importseriesdata.php">Import Series Data</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#banner" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Association Message Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="banner">
+                            <li>
+                                <a href="listmessage.php">Association Message Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#director1" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Director Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="director1">
+                            <li>
+                                <a href="listdirector1.php">Director Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#hgallery" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Home Gallery Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="hgallery">
+                            <li>
+                                <a href="listgallery.php">Home Gallery Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#mob" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Download Application Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="mob">
+                            <li>
+                                <a href="listmobile.php">Download Application Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#pages" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Pages  Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="pages">
+                            <li>
+                                <a href="listpages.php">Pages Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#email" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Contact Us Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="email">
+                            <li>
+                                <a href="listemail.php">Contact Us Management</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#adminemange" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Setting Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="adminemange">
+                            <li>
+                                <a href="change-password.php">Change Password</a>
+                            </li>
+                            <li>
+                                <a href="uploadlogo.php">Upload Logo</a>
+                            </li>
+                            <li>
+                                <a href="ganalytic.php">Google Analytic Code</a>
+                            </li>
+                            <li>
+                                <a href="copyright.php">Copyrights</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                      <a class="nav-link nav-link-collapse collapsed" href="inviteuser.php">
+                        <i class="fa fa-fw fa-wrench"></i>
+                        <span class="nav-link-text">Invite User</span>
+                      </a>
+                    </li> -->
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#inviteuser" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Invite User Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="inviteuser">
+                            <li>
+                                <a href="inviteuser.php">Invite User</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#livevideo" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Live video Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="livevideo">
+                            <li>
+                                <a href="livevideo.php">Live video 1</a>
+
+                            </li>
+                            <li>
+                                <a href="livevideo2.php">Live video 2</a>
+
+                            </li>
+                            <li>
+                                <a href="upcomingwebinars.php">Upcoming Webinars</a>
+
+                            </li>
+                            <li>
+                                <a href="pastwebinars.php">Past Webinars</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#liveevent" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Live Event Management</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="liveevent">
+                            <li>
+                                <a href="list_live_event.php">Live events</a>
+
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+<!--                --><?// include "admintop.php";?>
+            </div>
+        </nav>
+    </div>
+
+</div><!-- #header -->
+</body>
+
+</html>
